@@ -9,7 +9,9 @@ public class TailsGenerator {
         if (value == null) {
             return new ArrayList<>();
         }
-        return new ArrayList<>(value.length());
+        List<String> tailsList = new ArrayList<>(value.length() + 1);
+        tailsList.add(0, value);
+        return tailsList;
     }
 
 }
